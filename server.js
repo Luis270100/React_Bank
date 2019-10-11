@@ -32,12 +32,6 @@ module.exports = Transaction
 // 
 
 
-app.get('/', (req, res) => {
-    res.send("Get request for balance ")
-    console.log("Working")
-})
-
-
 app.get('/transactions', function (req, res){
     Transaction.find({}, function(err, results){
         console.log(results)
@@ -46,6 +40,7 @@ app.get('/transactions', function (req, res){
 })
 
 app.post('/transaction', function (req, res ){
+    console.log(req.body)
     let transaction = new Transaction (req.body)
     transaction.save()
     res.end() 

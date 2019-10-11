@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 class Operations extends Component {
 
-
-
     render() {
         let data = this.props.data
         let handleInputs = this.props.handleInputs
